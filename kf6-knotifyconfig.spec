@@ -1,23 +1,23 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.18
+%define		kdeframever	6.19
 %define		qtver		5.15.2
 %define		kfname		knotifyconfig
 
 Summary:	Configuration dialog for desktop notifications
 Name:		kf6-%{kfname}
-Version:	6.18.0
+Version:	6.19.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	50fea50cb19a6da87c6b240737418321
+# Source0-md5:	f8a5a25b0732e76c8f2459620d650c02
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel >= %{qtver}
-BuildRequires:	Qt6TextToSpeech-devel >= %{qtver}
 BuildRequires:	Qt6Test-devel >= %{qtver}
+BuildRequires:	Qt6TextToSpeech-devel >= %{qtver}
 BuildRequires:	Qt6Widgets-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16
 BuildRequires:	kf6-extra-cmake-modules >= %{version}
@@ -97,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %ghost %{_libdir}/libKF6NotifyConfig.so.6
-%attr(755,root,root) %{_libdir}/libKF6NotifyConfig.so.*.*
+%{_libdir}/libKF6NotifyConfig.so.*.*
 %{_datadir}/qlogging-categories6/knotifyconfig.categories
 
 %files devel
