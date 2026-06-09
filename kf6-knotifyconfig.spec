@@ -51,6 +51,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 KNotifyConfig provides a configuration dialog for desktop
 notifications which can be embedded in your application.
 
+%description -l pl.UTF-8
+KNotifyConfig dostarcza konfiguracyjne okienko dialogowe dla
+powiadomień pulpitu, które może być zagnieżdżone w twojej aplikacji.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
